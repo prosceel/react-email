@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <title>React App</title>
+    <style>
+        .generic-site-logo {
+            width: 165px;
+        }
+
+        .hero-wrapper {
+            width: 100%;
+        }
+
+        .hero-logo {
+            display: block;
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .hero-logo-mobile {
+            display: none;
+            width: 343px;
+            max-width: 100%;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 534px;
+            padding-left: 18px;
+        }
+
+        .second-section-grid--is-mobile {
+            display: none;
+            margin-top: 41px;
+        }
+
+        .footer {
+            padding: 38px 56px 57px;
+        }
+
+        .footer-image-grid {
+            display: table;
+        }
+
+        .footer-image-grid--is-mobile {
+            display: none;
+        }
+
+        .footer-navigation {
+            display: table;
+            margin: 25px auto 0;
+        }
+
+        .footer-navigation--is-mobile {
+            display: none;
+            margin-top: 23px;
+        }
+
+        .all-rights-reserved {
+            margin-top: 11px;
+        }
+
+        .footer-link {
+            padding: 0 22px;
+        }
+
+        @media (max-width: 549px) {
+            .hero-logo {
+                display: none;
+            }
+
+            .hero-logo-mobile {
+                display: block;
+            }
+
+            .hero-wrapper {
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 17px;
+                padding-right: 17px;
+            }
+
+            .hero-image {
+                padding: 0;
+                max-width: 100%;
+                margin-top: 32px;
+            }
+
+            .hero-text {
+                margin-top: 18px !important;
+            }
+
+            .second-section-text {
+                padding: 0 10px;
+            }
+
+            .second-section-text--is-last {
+                padding: 0 20px;
+                margin-top: 36px !important;
+            }
+
+            .footer-image-grid {
+                display: none;
+            }
+
+            .footer-image-grid--is-mobile {
+                display: table;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .generic-site-logo {
+                width: 152px;
+            }
+
+            .second-section-grid {
+                display: none;
+            }
+
+            .second-section-grid--is-mobile {
+                display: table;
+            }
+
+            .second-section-item-image,
+            .second-section-item-text {
+                max-width: 90% !important;
+            }
+
+            .second-section-item-text {
+                margin: 25px auto 0 !important;
+                text-align: center !important;
+                min-height: auto !important;
+            }
+
+            .second-section-item-link {
+                display: inline-block !important;
+                margin-top: 22px !important;
+            }
+
+            .second-section-item-link img {
+                margin-left: 8px !important;
+            }
+
+            .footer {
+                padding: 41px 24px 57px;
+            }
+
+            .all-rights-reserved {
+                margin-top: 14px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 699px) {
+            .footer-navigation {
+                display: none;
+            }
+
+            .footer-navigation--is-mobile {
+                display: table;
+            }
+        }
+
+        @media (max-width: 339px) {
+            .footer-link {
+                padding: 0 15px;
+            }
+        }
+    </style>
+  </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <title>React App</title>
+    <style>
+        .generic-site-logo {
+            width: 165px;
+        }
+
+        .hero-wrapper {
+            width: 100%;
+        }
+
+        .hero-logo {
+            display: block;
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .hero-logo-mobile {
+            display: none;
+            width: 343px;
+            max-width: 100%;
+        }
+
+        .hero-image-wrapper {
+            width: 100%;
+            max-width: 534px;
+            display: table;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 534px;
+            padding-left: 18px;
+        }
+
+        .second-section-grid--is-mobile {
+            display: none;
+            margin-top: 41px;
+        }
+
+        .footer {
+            padding: 38px 56px 57px;
+        }
+
+        .footer-image-grid {
+            display: table;
+        }
+
+        .footer-image-grid--is-mobile {
+            display: none;
+        }
+
+        .footer-navigation {
+            display: table;
+            margin: 31px auto 0;
+        }
+
+        .footer-navigation--is-mobile {
+            display: none;
+            margin-top: 29px;
+        }
+
+        .all-rights-reserved {
+            margin-top: 11px;
+        }
+
+        .footer-link {
+            padding: 0 22px;
+        }
+
+        @media (max-width: 549px) {
+            .hero-logo {
+                display: none;
+            }
+
+            .hero-logo-mobile {
+                display: block;
+            }
+
+            .hero-wrapper {
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 17px;
+                padding-right: 17px;
+            }
+
+            .hero-image {
+                padding: 0;
+                max-width: 100%;
+                margin-top: 32px;
+            }
+
+            .hero-text {
+                margin-top: 18px !important;
+            }
+
+            .second-section-text {
+                padding: 0 10px;
+            }
+
+            .second-section-text--is-last {
+                padding: 0 20px;
+                margin-top: 36px !important;
+            }
+
+            .footer-image-grid {
+                display: none;
+            }
+
+            .footer-image-grid--is-mobile {
+                display: table;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .generic-site-logo {
+                width: 152px;
+            }
+
+            .second-section-grid {
+                display: none;
+            }
+
+            .second-section-grid--is-mobile {
+                display: table;
+            }
+
+            .second-section-item-image,
+            .second-section-item-text {
+                max-width: 90% !important;
+            }
+
+            .second-section-item-text {
+                margin: 25px auto 0 !important;
+                text-align: center !important;
+                min-height: auto !important;
+            }
+
+            .second-section-item-link {
+                display: inline-block !important;
+                margin-top: 22px !important;
+            }
+
+            .second-section-item-link img {
+                margin-left: 8px !important;
+            }
+
+            .footer {
+                padding: 41px 24px 57px;
+            }
+
+            .all-rights-reserved {
+                margin-top: 14px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 699px) {
+            .footer-navigation {
+                display: none;
+            }
+
+            .footer-navigation--is-mobile {
+                display: table;
+            }
+        }
+
+        @media (max-width: 339px) {
+            .footer-link {
+                padding: 0 15px;
+            }
+        }
+    </style>
+  </head>
+  <body style='padding: 0; margin: 0'>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
